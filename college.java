@@ -1,22 +1,27 @@
-class college
-{
-String collegeName="PGGC11";
-String location="Sector 11,Chd";
-public void conductExams()
-{
-System.out.println("Ready for exams");
-}
-{
-System.out.println(location);	
-System.out.println("Ready for exams");
-} 
- 
-public static void main(String[] ar)
-{
-/* System.out.println(new college());  object*/
-college ob=new college();
-System.out.println(ob.collegeName);
-//ob.conductExams();
-//System.out.println(collegeName);
-}
+package inheritance;
+//method override
+public class college extends university{
+	@Override
+	public void ConductExams()
+	{
+		System.out.println("exams over");
+	}
+	@Override
+	public void ReleaseResult()
+	{
+		System.out.println("Give result fast");
+	}
+	public void CollectFee()
+	{
+		System.out.println("Pay the Fee");
+		super.ConductExams();
+		super.ReleaseResult();
+	}
+	public static void main(String[] args) {
+		college obj=new college();
+		obj.ConductExams();
+		obj.ReleaseResult();
+		obj.CollectFee();
+	}
+	
 }

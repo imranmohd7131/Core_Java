@@ -1,13 +1,42 @@
-package mythread;
-
-public class User {
+package creating_Bank_Atm;
+import java.util.Scanner;
+class User {
 	public static void main(String[] args) {
-		Amazon obj=new Amazon();
-		Payment t1=new Payment("Paytm",obj);
-		Payment t2=new Payment("Gpay",obj);
-		Payment t3=new Payment("PhonePe",obj);
-		t1.start();
-		t2.start();
-		t3.start();
+		Scanner sc = new Scanner(System.in);
+		Bank obj = new ATM();
+		boolean b=true;
+		while(b)
+		{
+		System.out.println("1. deposit");
+		System.out.println("2. withdraw");
+		System.out.println("3. CheckBalance");
+		System.out.println("0. Exit");
+		//System.out.println("");
+		int input=sc.nextInt();
+		if(input == 1)
+		{
+			System.out.println("Enter the amount to deposit");
+			int amount =sc.nextInt();
+			obj.deposit(amount);
+		}
+		else if(input == 2)
+		{
+			System.out.println("Enter the amount to withdraw");
+			int amount=sc.nextInt();
+			obj.withdraw(amount);
+		}
+		else if(input == 3)
+		{
+			obj.CheckBalance();
+		}
+		else if(input == 0)
+		{
+			b=false;
+		}
+		else
+		{
+			System.out.println("Invalid input");
+		}
+		}
 	}
 }

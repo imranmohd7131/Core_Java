@@ -1,25 +1,26 @@
-package exception;
-
+package array;
 import java.util.Scanner;
-
 public class num {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("enter the first number:");
-		int n=sc.nextInt();
-		System.out.println("enter the second number:");
-		int n2=sc.nextInt();
-		try {
-		System.out.println("the result is :"+(n/n2));
-		System.out.println("inside try block");
-		}catch(ArithmeticException e)
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Enter size of array:");
+		int n=ob.nextInt();
+		System.out.println("Enter the elements:");
+		int[] a=new int[n];
+		for(int i=0;i<=a.length-1;i++)
 		{
-			System.out.println("cannot divide by zero");
+			a[i]=ob.nextInt();
 		}
-		
-		System.out.println("program ends");
-		
-		
-		
+		System.out.println("Entered Elements are:");
+		for(int i=0;i<=a.length-1;i++)
+		{
+			System.out.println(a[i]);
+		}
+		System.out.println("Reverse order");
+		for(int i=a.length-1;i>=0;i--)
+		{
+			System.out.println(a[i]);
+		}
 	}
+	
 }

@@ -1,11 +1,10 @@
+package inheritance;
+          //Multi level inheritance
+ class Daughter extends Father{
 
-public class Daughter implements Father{
-
-	@Override
-	public void givePermission() {
-		System.out.println("Permission granted for daughter");
-		
-	}
-	
-	
+	 public void study()
+	 {
+		 System.out.println("daughter study");
+		 
+	 }
 }

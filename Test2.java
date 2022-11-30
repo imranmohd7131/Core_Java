@@ -1,13 +1,14 @@
-package encapsulation;
-
-public class Test2 {
-	public static void main(String[] args) {
-		person obj =new person();
-		System.out.println(obj.getAge());
-		obj.setAge(40);
-		System.out.println(obj.getName());
-		System.out.println(obj.getAadhar());
-		System.out.println(obj.getPhone());
-		obj.setPhone(2343235673L);
-	}
+package inheritance;
+	//Multi level inheritance
+ class Test2 {
+   public static void main(String[] args) {
+	   Father obj=new Father();
+	   System.out.println(obj.age);
+	   obj.lendmoney();
+	   Daughter obj2=new Daughter();
+	   System.out.println(obj2.age);
+	   obj2.lendmoney();
+	   obj2.study();
+}
+	
 }

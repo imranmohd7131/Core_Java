@@ -1,5 +1,5 @@
 package inheritance;
 //Hierarchial Inheritance
-class son extends parent2{
-
+class parent2 {
+ int age=50;
 }
